@@ -12,6 +12,7 @@ def projects(request):
     'title':'Рекрутинговый портал',
      'description':'Вакансии для специалистов экстра-класса.'},
       ]
-    return render(request, 'projects/projects.html', {'projects':projectsList})
+    return render(request, 'projects.html', {'projects':projectsList})
+
 def project(request):
-    return render(request, 'projects/single-project.html')
+    return render(request, 'single-project.html')
