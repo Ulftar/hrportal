@@ -12,7 +12,11 @@
                 <a href="{% url 'tag' tag.slug %}" class="tag tag--pill tag--sub tag--lg">{{tag}}</a>
                 {% endfor %}               
                 </div>
-
+                <div class="singleProject__toolStack">
+				{% for tag in project.tags.all %}
+      				<a href="{% url 'tag' tag.slug %}" class="tag tag--pill tag--sub tag--lg">{{tag}}</a>
+  				{% endfor %}           	
+				</div>
                 {% if project.source_link %}
                 <a class="singleProject__liveLink" href="{{ project.source_link }}" target="_blank"><i
                         class="im im-external-link"></i>Исходный код на GitHub

@@ -7,7 +7,11 @@
             <div class="hero-section__box">
                 <h2>Поиск по <span>проектам</span></h2>
             </div>
-
+        	<div class="project__tags">
+   				{% for tag in project.tags.all %}
+      			<a href="{% url 'tag' tag.slug %}" class="tag tag--pill tag--main">{{tag}}</a>
+   				{% endfor %}
+			</div>
             <div class="hero-section__search">
                 <form id='searchForm' class="form" action="{% url 'projects' %}" method="get">
                     <div class="form__field">
